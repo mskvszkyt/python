@@ -1,0 +1,24 @@
+import random
+
+def game():
+    szam = random.randint(0,101)
+    tippek_szama = 6
+    game_live = True
+    while game_live == True:
+        if tippek_szama != 1:
+            pass
+        else:
+            print("ennyi volt, nem talaltad ki")
+            quit()
+        tipp = int(input("tipped: "))
+        if tipp == szam:
+            print("elalaltad")
+            quit()
+        elif tipp > szam:
+            tippek_szama -= 1
+            print("kisebb, még ",tippek_szama,"tipped maradt")
+        else:
+            tippek_szama -= 1
+            print("nagyobb, még ",tippek_szama,"tipped maradt")
+
+game()
