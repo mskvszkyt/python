@@ -1,0 +1,24 @@
+import random
+helyes_szam = random.randint(1, 101)
+szam = int(input("talald ki a számot: "))
+jatek_vege = False
+tippek_szama = 6
+
+while jatek_vege == False:
+
+    if szam == helyes_szam:
+        print("Eltaláltad")
+        jatek_vege = True
+
+    elif not szam < helyes_szam:
+        tippek_szama -= 1
+        print("Tipped kisebb. Még {} tipped maradt.".format(tippek_szama))
+        int(input("talald ki a szémot: "))
+
+    else:
+        tippek_szama -= 1
+        print("Tipped nagyobb. Még {} tipped maradt.".format(tippek_szama))
+        int(input("talald ki a számot: "))
+
+    if tippek_szama == 1:
+        jatek_vege = True
